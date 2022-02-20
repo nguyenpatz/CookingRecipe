@@ -7,6 +7,7 @@
     <title>Cooking with me</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="cotainer">
@@ -14,9 +15,57 @@
             <div class="header__logo">
                 <img class="logo" src="./images/logo.png" alt="">
             </div>
-            <div class="menu__screen">search bar & navbar</div>
-            <!-- <div>search bar & navbar</div> -->
+            <!--  -->
+            <div class="header__menu header__desktop">
+                <!-- search -->
+                <div class="header__searchbar header__searchbar-desktop">
+                    <form  method="get">
+                        <input type="text" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <!-- end search -->
+                <!-- menu desktop-->
+                <nav class="menu__main menu__desktop">
+                    <a href="">Home</a>
+                    <a href="">Explore</a>
+                    <a href="">Food</a>
+                    <a href="">Drink</a>
+                </nav>
+                <!-- end menu desktop-->
+
+                
+
+
+            </div>
+            <!-- mobile -->
+                
+            
+            <div class="header__menu header__mobile">
+                <button class="btn__menu"><i class="fa-solid fa-bars"></i></button>
+                
+              
+            </div>
+
+            <!-- end mobile -->
+            
         </header>
+        <div class="mobile__container">
+            <nav class="menu__mobile">
+                <a href="">Home</a>
+                <a href="">Explore</a>
+                <a href="">Food</a>
+                <a href="">Drink</a>
+            </nav>
+        
+            <div class="header__searchbar-mobile">
+                <form  method="get">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
     </div>
+    <script src="./app/app.js"></script>
 </body>
 </html>

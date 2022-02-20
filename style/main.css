@@ -8,21 +8,23 @@
 }
 
 .header {
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    background: #000;
+    right: 0; */
+    background: rgb(241, 236, 236);
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 }
 
 .header div {
-    color: #fff;
+    color: #000;
 }
 
-.header__logo {
+.header .header__logo {
+    display: flex;
     align-items: center;
 }
 
@@ -30,3 +32,111 @@
     width: 4rem;
     height: 4rem;
 }
+
+.header .header__menu {
+    display: flex;
+    justify-content: space-around;
+    /* width: 100%; */
+}
+
+.menu__desktop {
+    margin-left: 100px;
+}
+
+.header__menu .header__searchbar form {
+    text-align: center;
+}
+.header__menu .header__searchbar form input {
+    padding: 5px;
+    font-size: 1.3rem;
+    border: none;
+}
+
+.header__menu .header__searchbar form button { 
+    padding: 7px;
+    border: none;
+}
+
+.menu__main {
+    display: flex;
+}
+.menu__main a {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.show {
+    display: block !important;
+}
+
+.mobile__container{
+    display: none;
+}
+
+@media screen and (min-width: 901px){
+    .header__mobile {
+        display: none !important;
+    }
+    .mobile__container{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    .header {
+        justify-content: space-between;
+    }
+    .header__desktop {
+        display: none !important;
+    }
+
+    .header__mobile {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 10px;
+    }
+
+    .mobile__container {
+        background: rgb(241, 236, 236);
+    }
+
+    .btn__menu {
+        border: none;
+        font-size: 1.5rem;
+    }
+    .menu__mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        /* min-width: 100vw; */
+    }
+    .menu__mobile a {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+        padding: 10px;
+        font-weight: 600;
+    }
+
+    .menu__mobile a:hover {
+        background: #fff;
+    }
+    .header__searchbar-mobile form input{
+        /* min-width: 100%; */
+        width: 100%;
+        padding: 5px;
+        font-size: 1.3rem;
+        border: none;
+        display: block;
+    }
+
+    .header__searchbar-mobile form button {
+        padding: 7px;
+        border: none;
+        width: 100%;
+    }
+  }
