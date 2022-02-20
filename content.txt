@@ -1,0 +1,26 @@
+có phần bật câu hỏi
+có các nút filter các loại 
+có slide quảng cáo món ăn 
+
+    -container-grid: có 5 hàng
+        + header {
+            logo,
+            searchbar
+            navbar
+        }
+        + slider {
+            image,
+            auto chuyển cảnh
+        }
+        + button filter {
+            bữa sáng,
+            bữa trưa,
+            bữa tối,
+            tráng miệng
+        }
+        + hình ảnh các món ăn theo filter{
+            title,
+            content
+        }
+        + contact with me 
+
