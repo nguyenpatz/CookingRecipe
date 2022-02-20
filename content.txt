@@ -2,7 +2,7 @@ có phần bật câu hỏi
 có các nút filter các loại 
 có slide quảng cáo món ăn 
 
-    -container-grid: có 5 hàng
+    -container: có 5 hàng
         + header {
             logo,
             searchbar
