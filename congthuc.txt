@@ -1,0 +1,47 @@
+[{
+    id: 1,
+    ten: "Thịt kho",
+    tieude:  "thịt kho Tàu thơm ngon đúng vị, thịt mềm béo ngậy",
+    noidung: "Đang cập nhật",
+    nguyenlieu: ["Thịt ba chỉ hay thịt chân giò 500 gr",
+        "Trứng vịt luộc 5 quả",
+        "Nước dừa 400 ml",
+        "Hành băm 1 muỗng canh",
+        "Tỏi băm 1 muỗng canh",
+        "Nước mắm 3 muỗng canh",
+        "Gia vị thông dụng 1 ít"
+    ],
+},
+{
+    id: 2,
+    ten: "Sườn xào",
+    tieude: "sườn xào chua ngọt đậm đà, hấp dẫn, đưa cơm cho gia đình",
+    noidung: "Đang cập nhật",
+    nguyenlieu: [
+        " Sườn heo non 500 gr",
+        "Ớt chuông 3 trái",
+        "Hành tây nhỏ 1 củ",
+        "Hành 2 củ",
+        "Tỏi 1 củ",
+        "Ớt 3 trái",
+        "Ngò 1 muỗng canh",
+        "Giấm 3 muỗng canh",
+        "Nước mắm 2 muỗng canh",
+        "Dầu ăn 1 ít",
+        "Bột năng 1 ít",
+        "Gia vị thông dụng 1 ít"
+    ],
+},
+{
+    id: 3,
+    ten: "Rau muống xào",
+    tieude: "rau muống xào tỏi ngon thơm nức mũi dân dã khó cưỡng",
+    noidung: "Đang cập nhật",
+    nguyenlieu: [
+        "Rau muống 500 gr",
+        "Tỏi 2 củ",
+        "Dầu hào 1 muỗng canh",
+        "Dầu ăn 2 muỗng canh",
+        "Gia vị thông dụng 1 ít"
+    ],
+}]

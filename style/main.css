@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Monoton&family=Roboto&family=Source+Sans+Pro:wght@400;600&display=swap');
 
+
+:root {
+    --btn__background: #C8F2EF;
+    --btn__background2:#ACB992;
+    --clr__black: #000;
+    --clr__white : #fff;
+    --border__hover: #BB6464;
+}
 *{
     padding: 0;
     margin: 0;
@@ -76,6 +84,32 @@
     display: none;
 }
 
+.button__container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button__container button {
+    border: 1px solid #FFFA4D;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem;
+    background: var(--clr__black);
+    color: var(--clr__white);
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Culpa";
+    font-weight: 600;
+}
+
+.button__container button:hover {
+    color: var(--clr__black);
+    border-color: var(--border__hover);
+    background: var(--btn__background2);
+}
+
+
 @media screen and (min-width: 901px){
     .header__mobile {
         display: none !important;
@@ -140,3 +174,6 @@
         width: 100%;
     }
   }
+
+
+  
