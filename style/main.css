@@ -6,7 +6,12 @@
     --btn__background2:#ACB992;
     --clr__black: #000;
     --clr__white : #fff;
+    --clr__border1: #E5E3C9;
+    --clr__border2: #B4CFB0;
+    --clr__border3: #789395;
     --border__hover: #BB6464;
+    --clr__text1: #E3B7A0;
+    --clr__text2: #BF9270;
 }
 *{
     padding: 0;
@@ -109,6 +114,48 @@
     background: var(--btn__background2);
 }
 
+/* grid menu */
+.section__center {
+    display: grid;
+    grid-template-columns: repeat(2,250px);
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.grid__item {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px auto auto;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #000;
+    justify-items: center;
+    text-align: center;
+}
+
+.grid__item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+    border-top: 0.4rem solid var(--clr__border3);
+    border-bottom: 0.4rem solid var(--clr__border3);
+}
+
+.grid__item .food__name {
+    font-family: "Mea Culpa";
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: var(--clr__black);
+}
+
+.grid__item .food__title {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--clr__text2);
+}
+
 
 @media screen and (min-width: 901px){
     .header__mobile {
@@ -145,7 +192,6 @@
     .menu__mobile {
         display: flex;
         flex-direction: column-reverse;
-        /* min-width: 100vw; */
     }
     .menu__mobile a {
         width: 100%;
@@ -173,7 +219,10 @@
         border: none;
         width: 100%;
     }
+
+    .section__center {
+        grid-template-columns: 1fr;
+    }
   }
 
 
-  
