@@ -67,7 +67,7 @@ const data_recipe = [{
 {
     id: 4,
     ten: "Thịt luộc",
-    tieude: "thịt heo ngon trắng mềm",
+    tieude: "Thịt heo ngon trắng mềm",
     noidung: "Đang cập nhật",
     loai: "luoc",
     tenloai: "Món luộc",
@@ -77,6 +77,19 @@ const data_recipe = [{
         "Thịt mỡ",
     ],
 }];
+
+//object slide
+
+const slider = [
+    "./images/slide/slide1.jpg",
+    "./images/slide/slide2.jpg",
+    "./images/slide/slide3.jpg",
+    "./images/slide/slide4.jpg"
+];
+
+const slideItem = document.querySelector(".slider__item");
+
+let currentImage = 0;
 
 // console.log(data_recipe);
 
@@ -90,7 +103,9 @@ window.addEventListener("DOMContentLoaded", function() {
     
     displayFood(data_recipe);
     displayButton(data_recipe);
-
+    changeSlideButton();
+    changeSlideAuto();
+    
 });
 
 function displayButton(data) {
@@ -102,17 +117,42 @@ function displayButton(data) {
         }
         return prev;
     }, initialValue);
-    console.log(nameButtons);
+
 
 
     // hiển thị nút loại
     const filter_button = nameButtons.map(function(element) {
-        return `<button class="filter__button btn1" data-id="${element}">${element}</button>`;
+        return `<button class="filter__button btn1" type="button" data-id="${element}">${element}</button>`;
     }).join("");
 
     buttonContainter.innerHTML = filter_button;
     // sau khi có được tên loai thì bắt đầu thực hiện sự kiện 
     // khi click vào 1 loại sẽ chỉ hiển thị món ăn có liên quan tới loại đó 
+
+    const button__id = document.querySelectorAll(".filter__button");
+    button__id.forEach(function(btn) {
+        btn.addEventListener("click", function(e) {
+            const value__button = e.currentTarget.dataset.id;
+            const selectedFood = data.filter(function(element) {
+            if(element.tenloai == value__button) {
+                return element;
+                // console.log(element);
+            }
+        })
+        if(value__button === "Tất cả") {
+            displayFood(data);
+        } else {
+            displayFood(selectedFood);
+        }
+        });
+   
+        
+    });
+}
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function displayFood(data) {
@@ -121,10 +161,51 @@ function displayFood(data) {
                 <img class="grid__image" src="${element.src}" alt="${element.ten}">
                 <div>
                     <p class="food__name">${element.ten}</p>
-                    <p class="food__title">${element.tieude}</p>
+                    <p class="food__title">${capitalizeFirstLetter(element.tieude)}</p>
                 </div>
             </div>`;
     }).join("");
 
     foodContainer.innerHTML = showFood;
+}
+
+function showSlide() {
+    slideItem.src = slider[currentImage];
+}
+
+function changeSlideButton() {
+    const buttonLeft = document.querySelector(".button__left");
+    const buttonRight = document.querySelector(".button__right");
+    buttonLeft.addEventListener("click", () => {
+        currentImage--;
+        
+        if(currentImage < 0) {
+            currentImage = slider.length - 1;
+        }
+        showSlide();
+    });
+
+    buttonRight.addEventListener("click", () => {
+        currentImage++;
+        
+        if(currentImage > slider.length - 1) {
+            currentImage = 0;
+        }
+        showSlide();
+    });
+}
+
+function changeSlideAuto() {
+    currentImage++;
+    if(currentImage > slider.length-1) {
+        currentImage = 0;
+    }
+    
+    const dots = document.getElementsByClassName("dot");
+    for(let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" dot-active", "");
+    }
+    dots[currentImage].className += " dot-active";
+    showSlide();
+    setTimeout(changeSlideAuto, 2000);
 }
