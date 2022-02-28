@@ -209,3 +209,16 @@ function changeSlideAuto() {
     showSlide();
     setTimeout(changeSlideAuto, 2000);
 }
+
+
+// hiển thị các question và answer
+const domContainer = document.querySelector(".container");
+
+class Question {
+    constructor(title, answer) {
+        this.title = title;
+        this.answer = answer;
+    }
+}
+// const contactComponent = 
+console.log(domContainer);
