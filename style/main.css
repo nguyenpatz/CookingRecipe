@@ -224,18 +224,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background: var(--clr__background3); */
     background: var(--clr__background3);
+    /* display: block; */
+    
+}
+
+.question__container > .title > h2 {
+    font-family: "Arimo";
+    font-size: 2rem;
+    text-transform: capitalize;
 }
 
 .question__container .question__container-content {
     display: flex;
     flex-direction: column;
+    background: #fff;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #000;
+    margin-top: 20px;
+    padding: 20px;
+
 }
 
 .question__container .question__container-content .question__title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+.question__container .question__container-content .question__title p {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.question__container .question__container-content .answer {
+    display: none;
+}
+
+
+
 @media screen and (min-width: 901px){
     .header__mobile {
         display: none !important;
